@@ -14,7 +14,7 @@ Sets some settings and adds hotkeys:<br/>
 ## Git
 
 #### .gitconfig
-Set some setting and add aliases:<br/>
+Sets some setting and addd aliases:<br/>
 <table>
 <tr><td>  git co  </td><td>  git checkout               </td></tr>
 <tr><td>  git ci  </td><td>  git commit                 </td></tr>
