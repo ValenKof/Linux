@@ -1,0 +1,22 @@
+[user]
+  email = kvmisis@gmail.com
+  name = Valentin Kofman
+[push]
+  default = simple
+[pull]
+  rebase = true
+[merge]
+  tool = vimdiff
+[color]
+  ui = true
+[alias]
+  co = checkout
+  ci = commit
+  st = status
+  up = "!f(){ git checkout master && git fetch origin master && git pull origin master; };f"
+  ls = branch -v
+[core]
+  autocrlf = input
+  safecrlf = true
+[credential]
+  helper = cache --timeout=300
