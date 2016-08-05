@@ -1,4 +1,7 @@
 "Valentin Kofman (kvmisis@gmail.com)"
+
+"Modern C++ syntax highlight: https://github.com/vim-jp/vim-cpp"
+
 set tabstop=2
 set shiftwidth=2
 set expandtab
