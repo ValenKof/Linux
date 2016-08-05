@@ -56,9 +56,8 @@ autocmd filetype cpp nnoremap <S-r> :!~/scripts/run.sh <CR>
 
 "comment selected lines"
 vmap //
-\ :set hlsearch! hlsearch?<CR>
 \ :s:^://<CR>
-\ :set hlsearch! hlsearch?<CR>
+\ :nohlsearch<CR>
 
 "comment/uncomment selected word"
 nnoremap //
