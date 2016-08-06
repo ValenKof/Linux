@@ -37,11 +37,19 @@ inoremap <expr> <M-,> pumvisible() ? '<C-n>' : '<C-x><C-o><C-n><C-p><C-r>=pumvis
 "insert real tab"
 inoremap <S-Tab> <C-V><Tab>
 
-highlight OverLength ctermbg=red ctermfg=white guibg=#59292
-match OverLength /\%101v.*/
+"long lines coloring"
+highlight OverLength ctermbg=red ctermfg=white
+1match OverLength /\%101v.*/
 
-highlight ExtraWhitespace ctermbg=red ctermfg=white guibg=#59292
+"trailing whitespaces coloring"
+highlight ExtraWhitespace ctermbg=red ctermfg=white
 2match ExtraWhitespace /\s\+$/
+
+"completion coloring"
+highlight Pmenu ctermfg=white ctermbg=magenta
+
+"selected completion coloring"
+highlight PmenuSel ctermfg=magenta ctermbg=black
 
 hi Comment ctermfg=cyan
 hi LineNr ctermfg=brown
