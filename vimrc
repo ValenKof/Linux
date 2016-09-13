@@ -58,22 +58,43 @@ hi PreProc ctermfg=magenta
 hi Type ctermfg=green
 hi Statement ctermfg=brown
 
-"build and run"
-autocmd filetype cpp nnoremap <S-b> :!~/scripts/build.sh <CR>
-autocmd filetype cpp nnoremap <S-r> :!~/scripts/run.sh <CR>
+"(cpp) build"
+autocmd filetype cpp nnoremap <S-b>
+\ :!~/scripts/build.sh<CR>
 
-"comment selected lines"
-vmap //
+"(cpp) run"
+autocmd filetype cpp nnoremap <S-r>
+\ :!~/scripts/run.sh <CR>
+
+"(cpp) comment selected lines"
+autocmd filetype cpp vmap //
 \ :s:^://<CR>
 \ :nohlsearch<CR>
 
-"comment/uncomment selected word"
-nnoremap //
+"(cpp) comment/uncomment word under cursor"
+autocmd filetype cpp nnoremap //
 \ :set hlsearch! hlsearch?<CR>
 \ :s:\<<C-r><C-w>\>:/*&*/<CR>
 \ :silent! s:/\*/\*:<CR>
 \ :silent! s:\*/\*/:<CR>
 \ :set hlsearch! hlsearch?<CR>
+
+"(python) comment selected lines"
+autocmd filetype python vmap //
+\ :s:^:#<CR>
+\ :nohlsearch<CR>
+
+"(python) comment/uncomment word under cursor"
+autocmd filetype python nnoremap //
+\ :set hlsearch! hlsearch?<CR>
+\ :s:\<<C-r><C-w>\>:'''&'''<CR>
+\ :silent! s:'''''':<CR>
+\ :silent! s:'''''':<CR>
+\ :set hlsearch! hlsearch?<CR>
+
+"clear highlight"
+nnoremap <S-l>
+\ :hi clear<CR>
 
 "swap between .h and .cpp"
 map <F4> :e %:p:s,.h$,.X123X,:s,.cpp$,.h,:s,.X123X$,.cpp,<CR>
