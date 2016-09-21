@@ -92,6 +92,11 @@ autocmd filetype python nnoremap //
 \ :silent! s:'''''':<CR>
 \ :set hlsearch! hlsearch?<CR>
 
+"(sh) comment selected lines"
+autocmd filetype sh vmap //
+\ :s:^:#<CR>
+\ :nohlsearch<CR>
+
 "clear highlight"
 nnoremap <S-l>
 \ :hi clear<CR>
