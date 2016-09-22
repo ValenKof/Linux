@@ -104,3 +104,16 @@ autocmd filetype sh vmap //
 "clear highlight"
 nnoremap <S-l>
 \ :hi clear<CR>
+
+"hex mode"
+function ToggleHex()
+  if !exists("b:editHex") || !b:editHex
+    let b:editHex=1
+    %!xxd
+  else
+    let b:editHex=0
+    %!xxd -r
+  endif
+endfunction
+nnoremap <S-H>
+\ :call ToggleHex()<CR>
