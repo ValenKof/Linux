@@ -5,10 +5,12 @@
 #### .vimrc
 Sets some settings and adds hotkeys:<br/>
 <table>
-<tr><td>  &lt;Shift-Tab&gt;   </td><td>  insert '\t', but don't replace it with whitespaces  </td></tr>
-<tr><td>  //                  </td><td>  comment / uncomment word under cursor               </td></tr>
-<tr><td>  select lines + //   </td><td>  comment selected lines                              </td></tr>
-<tr><td>  &lt;F4&gt;          </td><td>  switch between x.h / x.cpp, x - current file name   </td></tr>
+<tr><td>  &lt;Shift-Tab&gt;   </td><td>  insert '\t', but don't replace it with whitespaces   </td></tr>
+<tr><td>  //                  </td><td>  comment / uncomment word under cursor (cpp, python)  </td></tr>
+<tr><td>  select lines + //   </td><td>  comment selected lines (cpp, python, sh)             </td></tr>
+<tr><td>  &lt;F4&gt;          </td><td>  switch between x.h and x.cpp (x - current file name) </td></tr>
+<tr><td>  &lt;Shift-L&gt;     </td><td>  disable all highlightings                            </td></tr>
+<tr><td>  &lt;Shift-H&gt;     </td><td>  switch between normal and hex mode                   </td></tr>
 </table>
 
 ## Git
