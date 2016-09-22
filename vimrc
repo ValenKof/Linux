@@ -79,6 +79,10 @@ autocmd filetype cpp nnoremap //
 \ :silent! s:\*/\*/:<CR>
 \ :set hlsearch! hlsearch?<CR>
 
+"(cpp) swap between .h and .cpp"
+autocmd filetype cpp map <F4>
+\ :e %:p:s,.h$,.X123X,:s,.cpp$,.h,:s,.X123X$,.cpp,<CR>
+
 "(python) comment selected lines"
 autocmd filetype python vmap //
 \ :s:^:#<CR>
@@ -100,6 +104,3 @@ autocmd filetype sh vmap //
 "clear highlight"
 nnoremap <S-l>
 \ :hi clear<CR>
-
-"swap between .h and .cpp"
-map <F4> :e %:p:s,.h$,.X123X,:s,.cpp$,.h,:s,.X123X$,.cpp,<CR>
