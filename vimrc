@@ -7,6 +7,9 @@ set shiftwidth=2
 set expandtab
 set ai
 
+"show line & column numbers"
+set ruler
+
 "enable line number"
 set number
 
