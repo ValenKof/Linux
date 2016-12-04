@@ -36,4 +36,4 @@ TODO
 
 #### valentin.zsh-theme
 
-Hint: Replace <code>X</code> inside <code>$fg[yellow]%}X</code> with machine name prefix.
+Hint: Replace <code>X</code> inside <code>%{$fg[yellow]%}X</code> with machine name prefix or use <code>valenkof-user.zsh-theme</code> with green :green_heart: letter <code>U</code> and <code>valenkof-root.zsh-theme</code> with red :heart: letter <code>R</code>.
