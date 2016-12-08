@@ -19,11 +19,9 @@ syntax on
 "backspace works correctly"
 set backspace=indent,eol,start
 
-"don't indent namespaces"
-set cino=N-s
-set cinoptions+=L0
-set cinoptions+=g0
+"c++ indent"
 set cin
+set cino=N-s,g0,+2s,l-s,m1
 
 "highlight searched words"
 set hlsearch
