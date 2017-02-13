@@ -1,0 +1,9 @@
+Host *
+     ServerAliveInterval 60
+     ServerAliveCountMax 30
+     ForwardAgent yes
+     IdentityFile /users/u/.ssh/id_rsa
+
+Host h
+     HostName 192.168.0.1
+     User u
