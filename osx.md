@@ -9,3 +9,13 @@
 #### add to /etc/man.conf before other MANPATH and MANPATH_MAP directives:
 <code>MANPATH /usr/local/opt/coreutils/libexec/gnuman</code><br>
 <code>MANPATH_MAP /usr/local/opt/coreutils/libexec/gnubin /usr/local/opt/coreutils/libexec/gnuman</code><br>
+## Installing GNU findutils (find, etc.)
+#### install findutils using homebrew
+<code>brew install findutils </code><br>
+#### add to .zshrc before other PATH and MANPATH edits:
+<code>PATH="/usr/local/opt/findutils/libexec/gnubin:$PATH"</code><br>
+<code>MANPATH="/usr/local/opt/findutils/libexec/gnuman:$MANPATH"</code><br>
+#### add to /etc/man.conf before other MANPATH and MANPATH_MAP directives:
+<code>MANPATH /usr/local/opt/findutils/libexec/gnuman</code><br>
+<code>MANPATH_MAP /usr/local/opt/findutils/libexec/gnubin /usr/local/opt/findutils/libexec/gnuman</code><br>
+
