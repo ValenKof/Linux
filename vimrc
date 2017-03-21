@@ -2,6 +2,16 @@
 
 "Modern C++ syntax highlight: https://github.com/vim-jp/vim-cpp"
 
+"Vundle git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim
+set nocompatible
+filetype off
+set rtp+=~/.vim/bundle/Vundle.vim
+call vundle#begin()
+Plugin 'VundleVim/Vundle.vim'
+Plugin 'Valloric/YouCompleteMe'
+call vundle#end()
+filetype plugin indent on
+
 set tabstop=2
 set shiftwidth=2
 set expandtab
