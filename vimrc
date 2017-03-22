@@ -2,14 +2,14 @@
 
 "Modern C++ syntax highlight: https://github.com/vim-jp/vim-cpp"
 
-"Vundle git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim
+"Vundle
 set nocompatible
 filetype off
 set rtp+=~/.vim/bundle/Vundle.vim
 call vundle#begin()
-Plugin 'VundleVim/Vundle.vim'
-Plugin 'Valloric/YouCompleteMe'
-Plugin 'altercation/vim-colors-solarized'
+Plugin 'VundleVim/Vundle.vim'             "git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim
+Plugin 'Valloric/YouCompleteMe'           "cd ~/.vim/bundle/YouCompleteMe && ./install.py --clang-completer
+Plugin 'altercation/vim-colors-solarized' "mkdir ~/.vim/colors && cp .vim/bundle/vim-colors-solarized/colors/solarized.vim ~/.vim/colors/
 call vundle#end()
 filetype plugin indent on
 
