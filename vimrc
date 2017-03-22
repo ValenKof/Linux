@@ -9,9 +9,14 @@ set rtp+=~/.vim/bundle/Vundle.vim
 call vundle#begin()
 Plugin 'VundleVim/Vundle.vim'
 Plugin 'Valloric/YouCompleteMe'
+Plugin 'altercation/vim-colors-solarized'
 call vundle#end()
 filetype plugin indent on
 
+"default compilation flags for ycm"
+let g:ycm_global_ycm_extra_conf = '~/.ycm_extra_conf.py'
+
+"c++ code style"
 set tabstop=2
 set shiftwidth=2
 set expandtab
@@ -22,9 +27,6 @@ set ruler
 
 "enable line number"
 set number
-
-"enable syntax highlight"
-syntax on
 
 "backspace works correctly"
 set backspace=indent,eol,start
@@ -48,26 +50,36 @@ inoremap <expr> <M-,> pumvisible() ? '<C-n>' : '<C-x><C-o><C-n><C-p><C-r>=pumvis
 "insert real tab"
 inoremap <S-Tab> <C-V><Tab>
 
+"solarized theme"
+syntax on
+set background=dark
+colorscheme solarized
+let g:solarized_termcolors=16
+
+"left panel coloring"
+hi SignColumn cterm=NONE ctermbg=8
+
+"syntax coloring
+"hi Comment ctermfg=cyan
+"hi LineNr ctermfg=brown
+"hi Constant ctermfg=red
+"hi PreProc ctermfg=magenta
+"hi Type ctermfg=green
+"hi Statement ctermfg=brown
+
+"completion coloring"
+"hi Pmenu ctermfg=white ctermbg=magenta
+
+"selected completion coloring"
+"hi PmenuSel ctermfg=magenta ctermbg=black
+
 "long lines coloring"
-highlight OverLength ctermbg=red ctermfg=white
+hi OverLength cterm=NONE ctermbg=red ctermfg=white
 1match OverLength /\%101v.*/
 
 "trailing whitespaces coloring"
-highlight ExtraWhitespace ctermbg=red ctermfg=white
+hi ExtraWhitespace cterm=NONE ctermbg=red ctermfg=white
 2match ExtraWhitespace /\s\+$/
-
-"completion coloring"
-highlight Pmenu ctermfg=white ctermbg=magenta
-
-"selected completion coloring"
-highlight PmenuSel ctermfg=magenta ctermbg=black
-
-hi Comment ctermfg=cyan
-hi LineNr ctermfg=brown
-hi Constant ctermfg=red
-hi PreProc ctermfg=magenta
-hi Type ctermfg=green
-hi Statement ctermfg=brown
 
 "(cpp) build"
 autocmd filetype cpp nnoremap <S-b>
