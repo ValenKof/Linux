@@ -1,4 +1,4 @@
-# Tutorial for making macOS more linux like 
+# Installing GNU utils and setting env on MacOS
 ## Installing GNU coreutils (cp, rm, ls, cat, kill, etc.)
 #### install coreutils using homebrew
 <code>brew install coreutils </code><br>
@@ -18,4 +18,3 @@
 #### add to /etc/man.conf before other MANPATH and MANPATH_MAP directives:
 <code>MANPATH /usr/local/opt/findutils/libexec/gnuman</code><br>
 <code>MANPATH_MAP /usr/local/opt/findutils/libexec/gnubin /usr/local/opt/findutils/libexec/gnuman</code><br>
-
