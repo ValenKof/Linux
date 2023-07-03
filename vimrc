@@ -8,7 +8,7 @@ filetype off
 set rtp+=~/.vim/bundle/Vundle.vim
 call vundle#begin()
 Plugin 'VundleVim/Vundle.vim'             "git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim
-Plugin 'oblitum/YouCompleteMe'           "cd ~/.vim/bundle/YouCompleteMe && ./install.py --clang-completer
+Plugin 'ycm-core/YouCompleteMe'           "cd ~/.vim/bundle/YouCompleteMe && ./install.py --clangd-completer
 Plugin 'altercation/vim-colors-solarized' "mkdir ~/.vim/colors && cp ~/.vim/bundle/vim-colors-solarized/colors/solarized.vim ~/.vim/colors/
 call vundle#end()
 filetype plugin indent on
@@ -16,30 +16,12 @@ filetype plugin indent on
 "default compilation flags for ycm
 let g:ycm_global_ycm_extra_conf = '~/.ycm_extra_conf.py'
 
-"c++ code style
-set tabstop=2
-set shiftwidth=2
-set expandtab
-set ai
-
-"c++ indent
-set cin
-set cino=N-s,g0,+2s,l-s,m1
-
-"show line & column numbers
-set ruler
-
-"enable line number
-set number
-
-"backspace works correctly
-set backspace=indent,eol,start
-
-"highlight searched words
-set hlsearch
-
-"enable mouse navigation
-set mouse=a
+set ts=2 sts=2 sw=2 et ai "c++ code style
+set cin cino=N-s,g0,+2s,l-s,m1 "c++ indent
+set ruler number "show line & column numbers
+set backspace=indent,eol,start "backspace works correctly
+set hlsearch "highlight searched words
+set mouse=a "enable mouse navigation
 
 "completion
 set completeopt=longest,menuone
